@@ -1,0 +1,170 @@
+@font-face {
+  font-family: Yekan;
+  src: url(./fnt/Yekan.woff2) format("woff2"),
+    url(./fnt/Yekan.woff) format("woff"),
+    url(./fnt/Yekan.ttf) format("truetype"),
+    url(./fnt/Yekan.eot?#iefix) format("embedded-opentype"),
+    url(./fnt/Yekan.svg#WeblogmaYekan) format("svg");
+  font-weight: normal;
+  unicode-range: U+0600 –06FF;
+}
+
+@font-face {
+  font-family: "Vazir Code Hack";
+  src: url("./fnt/monospaced/Vazir-Code-Hack.woff2") format("woff2"),
+    url("./fnt/monospaced/Vazir-Code-Hack.woff") format("woff"),
+    url("./fnt/monospaced/Vazir-Code-Hack.ttf") format("truetype"),
+    url("./fnt/monospaced/Vazir-Code-Hack.eot?#iefix")
+      format("embedded-opentype");
+  font-weight: normal;
+  unicode-range: U+0600 –06FF;
+}
+:root {
+  --green: #007d1b;
+  --black-head: #111;
+  --black-txt: #202124;
+  --primary-color: #888;
+  --grey-head-border: #888;
+  --grey-border: #d6d6d6;
+  --blue-link: #06c;
+}
+
+html,
+body {
+  font-family: Yekan, Tahoma, "Segoe UI", sans-serif, "Noto Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Apple Color Emoji";
+  color: var(--black-txt);
+  letter-spacing: -0.02em;
+  margin: 0;
+  height: 100%;
+  font-size: 16pt;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: underline;
+}
+
+.header a {
+  font-size: 18px;
+}
+
+.header a.active {
+  font-weight: bold;
+}
+
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 34px;
+  align-items: center;
+}
+
+main,
+.header,
+footer {
+  padding: 37px 60px;
+}
+
+main,
+footer {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+main {
+  overflow-y: auto;
+}
+
+#root {
+  display: grid;
+  grid-template-rows: 95px auto 125px;
+  height: 100%;
+  width: 100%;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+button {
+  font-family: Yekan, Tahoma, "Segoe UI", sans-serif, "Noto Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Apple Color Emoji";
+  border: 1px solid var(--primary-color);
+  background-color: transparent;
+  border-radius: 30px;
+  color: var(--black-txt);
+  font-size: 18px;
+  padding: 9px 36px;
+  height: fit-content;
+  cursor: pointer;
+}
+
+button.primary {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  row-gap: 12px;
+}
+
+p {
+  line-height: 33px;
+}
+
+p:not(:last-of-type) {
+  margin-bottom: 40px;
+}
+
+.article-title {
+  margin-bottom: 15px;
+}
+
+.article-title ~ p {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+h1 {
+  font-size: 30px;
+  margin-top: 0;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  row-gap: 12px;
+}
+
+label input {
+  width: 334px;
+}
+
+input {
+  font-size: 16px;
+  padding: 8px;
+  border: 1px solid #979797;
+  border-radius: 3px;
+}
+
+label > div {
+  display: flex;
+  column-gap: 8px;
+}
+
+.logout {
+  margin-left: auto;
+}
+
+h2 {
+  font-size: 18px;
+  margin-top: 18px;
+}
